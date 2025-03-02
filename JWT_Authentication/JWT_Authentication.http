@@ -1,6 +1,16 @@
-@JWT_Authentication_HostAddress = http://localhost:5029
+@JWT_Authentication_HostAddress = https://localhost:7028
 
 GET {{JWT_Authentication_HostAddress}}/weatherforecast/
 Accept: application/json
+
+###
+
+POST {{JWT_Authentication_HostAddress}}/api/auth/login
+Content-Type: application/json
+
+{
+  "username": "admin",
+  "password": "password"
+}
 
 ###
