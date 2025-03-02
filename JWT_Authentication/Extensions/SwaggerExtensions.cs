@@ -9,10 +9,10 @@ internal static class SwaggerExtensions
         services.AddSwaggerGen(c =>
         {
             // Creates a Swagger document named "v1".
-            // Title = "JWT API" => Sets the API name in Swagger UI.
+            // Title = "JWT Authentication API" => Sets the API name in Swagger UI.
             // Version = "v1" => Defines API version.
             // This is the general Swagger setup.
-            c.SwaggerDoc("v1", new OpenApiInfo { Title = "JWT API", Version = "v1" });
+            c.SwaggerDoc("v1", new OpenApiInfo { Title = "JWT Authentication API", Version = "v1" });
 
             // Enable JWT Authentication in Swagger
             // This enables a "Authorize [Lock Icon]" button in Swagger, where users can enter a JWT token.
