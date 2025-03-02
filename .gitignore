@@ -1,6 +1,6 @@
 ﻿################################################################################
 # This .gitignore file was automatically created by Microsoft(R) Visual Studio.
 ################################################################################
-
+/.vs
 /JWT_Authentication/bin/Debug/net8.0
 /JWT_Authentication/obj
