@@ -2,7 +2,7 @@
 
 namespace JWT_Authentication.Extensions;
 
-internal static class SwaggerExtensions
+internal static class SwaggerExtension
 {
     internal static IServiceCollection AddSwaggerGenWithAuth(this IServiceCollection services)
     {
@@ -18,12 +18,12 @@ internal static class SwaggerExtensions
             // This enables a "Authorize [Lock Icon]" button in Swagger, where users can enter a JWT token.
             c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
             {
-                Name = "Authorization",                 //Purpose: Header name where the token is passed.
-                Type = SecuritySchemeType.Http,         //Purpose: Defines the scheme type as HTTP authentication.
-                Scheme = "Bearer",                      //Purpose: Uses Bearer authentication (i.e., Authorization: Bearer <token>).
-                BearerFormat = "JWT",                   //Purpose: Specifies that the token format is JWT.
-                In = ParameterLocation.Header,          //Purpose: JWT token is sent in the header of requests.
-                Description = "Enter JWT Token in the format: Bearer {your_token}"          //Purpose: Instructions for users in Swagger UI.
+                Name = "Authorization",                 // Purpose: Header name where the token is passed.
+                Type = SecuritySchemeType.Http,         // Purpose: Defines the scheme type as HTTP authentication.
+                Scheme = "Bearer",                      // Purpose: Uses Bearer authentication (i.e., Authorization: Bearer <token>).
+                BearerFormat = "JWT",                   // Purpose: Specifies that the token format is JWT.
+                In = ParameterLocation.Header,          // Purpose: JWT token is sent in the header of requests.
+                Description = "Enter JWT Token"         // Purpose: Instructions for users in Swagger UI.
             });
 
             // This applies JWT authentication to all API endpoints in Swagger.
